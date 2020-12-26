@@ -1,0 +1,80 @@
+<footer class="page-footer font-small unique-color-dark">
+  <div class="container text-center text-md-left py-3">
+    <div dir="rtl"  class="row mt-3 text-right">
+      <div class="col-12 col-md-6 col-lg-6 mx-auto mb-4 ">
+        <h6 class="text-uppercase font-weight-bold">ارتباط</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto w-75">
+        <p>
+          <i class="fas fa-home mr-3"></i> تهران -بزرگراه شهید بابایی (غرب به شرق)- خروجی حکیمیه- خیابان شهید صدوقی- بلوار شهید عباسپور- دانشگاه آزاد اسلامی واحد تهران شمال</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> <span dir="ltr">+98 21 77 00 98 00</span></p>
+
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">لینک های مفید</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="{% url 'introducing' %}">معرفی دانشکده</a>
+        </p>
+        <p>
+          <a href="{% url 'groups:index' %}">گروه های آموزشی</a>
+        </p>
+        <p>
+          <a href="{% url 'staff:index' %}">کارکنان</a>
+        </p>
+        <p>
+          <a href="{% url 'fields:index' %}">رشته های تحصیلی</a>
+        </p>
+      </div>
+      <div class="col-12 col-md-3 col-lg-3 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">دسترسی</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="{% url 'album:index' %}">آلبوم تصاویر</a>
+        </p>
+        <p>
+          <a href="http://iau-tnb.ac.ir/fa/regulation">فرم ها و آئین نامه ها</a>
+        </p>
+        <p>
+          <a href="{% url 'news:index' %}">اخبار دانشکده</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright text-center py-3">
+    <div dir="rtl" class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-5">
+            <a class="mx-3" href="{% url 'contact' %}" target="_self"> تماس با ما</a>
+            <a class="mx-3" href="{% url 'contact' %}" target="_self"> دفتر تلفن</a>
+        </div>
+        <div class="col-12 col-md-8 col-lg-7">
+            © کلیه حقوق متعلق به دانشگاه آزاد اسلامی واحد تهران شمال می‌باشد.
+            <a href="https://mdbootstrap.com/"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+{% comment %} <footer>
+    <div class="container">
+        <div>
+            <div class="menu-widget-simple widget ">
+                <ul class="list-inline footer-menu divider-list left">
+                    <li>
+                        <a class=" " href="{% url 'contact' %}" target="_self"> تماس با ما</a>
+                    </li>
+                    <li>
+                        <a class=" " href="{% url 'contact' %}" target="_self"> دفتر تلفن</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row copyright">
+            <div class="copyright-container">
+                © کلیه حقوق متعلق به دانشگاه آزاد اسلامی واحد تهران شمال می‌باشد.
+            </div>
+        </div>
+    </div>
+</footer> {% endcomment %}

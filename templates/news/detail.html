@@ -1,0 +1,37 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block title %}{{news.title}}{% endblock title %}
+
+{% block body %}
+<div class="grey lighten-4">
+    <div class="container">
+        <div dir="rtl" class="row pt-5 mt-5 text-right">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">صفحه‌اصلی</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'news:index' %}">اخبار</a></li>
+                    <li class="breadcrumb-item active">{{news.pk}}</li>
+                  </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div dir="rtl" class="row text-right">
+            <div class="col-12">
+                <div class="card hoverable my-5">
+                    <div class="card-body">
+                        <h4 class="card-title">{{news.title}}</h4>
+                        <hr class="my-3">
+                        <p class="card-text lead">
+                            
+                            {{news.content|linebreaks}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

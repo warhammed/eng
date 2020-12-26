@@ -1,0 +1,104 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="breadcrumb">
+                <li><a href="{% url 'home' %}">صفحه‌اصلی</a></li>
+                <li class="active">تماس با ما</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container main-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 pull-right flip">
+                <div class="page-view">
+    <div class="contact-form">
+        <h2>تماس با ما</h2>
+        
+<form id="contactus-form" class="form-horizontal" action="http://eng.iau-tnb.ac.ir/fa/contactus" method="post">
+<input type="hidden" name="_csrf" value="F997-CowZzmcriNEigGi1k9BZKYOsX5mPqxGy5U8SxxWtz6IZVoxQ_OZex7YTs-AAzYQ8m3wMi1G1COSwH8CTw==">    <div class="form-group field-contact-name">
+<label class="control-label col-sm-3" for="contact-name">نام و نام خانوادگی</label>
+<div class="col-sm-6">
+<input type="text" id="contact-name" class="form-control input-small" name="Contact[name]" maxlength="255">
+<p class="help-block help-block-error "></p>
+</div>
+
+</div>    <div class="form-group field-contact-email required">
+<label class="control-label col-sm-3" for="contact-email">پست الکترونیکی</label>
+<div class="col-sm-6">
+<input type="text" id="contact-email" class="form-control input-medium" name="Contact[email]" maxlength="255" aria-required="true">
+<p class="help-block help-block-error "></p>
+</div>
+
+</div>    <div class="form-group field-contact-phone">
+<label class="control-label col-sm-3" for="contact-phone">تلفن</label>
+<div class="col-sm-6">
+<input type="text" id="contact-phone" class="form-control input-small" name="Contact[phone]" maxlength="255">
+<p class="help-block help-block-error "></p>
+</div>
+
+</div>            <div class="form-group field-contact-subject required">
+<label class="control-label col-sm-3" for="contact-subject">موضوع</label>
+<div class="col-sm-6">
+<input type="text" id="contact-subject" class="form-control input-medium" name="Contact[subject]" maxlength="255" aria-required="true">
+<p class="help-block help-block-error "></p>
+</div>
+
+</div>                <div class="form-group field-contact-recipientid">
+<label class="control-label col-sm-3" for="contact-recipientid">دریافت کننده</label>
+<div class="col-sm-6">
+<select id="contact-recipientid" class="form-control input-medium" name="Contact[recipientId]" maxlength="255">
+<option value="">لطفا دریافت کننده را انتخاب نمایید</option>
+<option value="2">ریاست دانشکده برق و کامپیوتر</option>
+</select>
+<p class="help-block help-block-error "></p>
+</div>
+
+</div>        <div class="form-group field-contact-content required">
+<label class="control-label col-sm-3" for="contact-content">متن پیام</label>
+<div class="col-sm-6">
+<textarea id="contact-content" class="form-control" name="Contact[content]" rows="7" aria-required="true"></textarea>
+<p class="help-block help-block-error "></p>
+</div>
+
+</div>    <div class="form-group field-contact-verifycode">
+<label class="control-label col-sm-3" for="contact-verifycode">کد امنیتی</label>
+<div class="col-sm-6">
+
+            <div class="row">
+            <div class="">
+                <div class="col-md-6">
+                    <div class="input-group" style="border: 1px solid #EEEEEE; border-radius: 8px;">
+                        <span id="captchaRefreshButton" class="input-group-addon" style="cursor:pointer">
+                            <i class="glyphicon glyphicon-refresh refresh-captcha"></i>
+                        </span>
+                        <img id="contact-verifycode-image" src="http://eng.iau-tnb.ac.ir/fa/contactus/captcha?v=5f7f6a5ac7d8e6.77341599" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 p-t-1 captcha-input-wrapper">
+                    <input type="text" id="contact-verifycode" class="form-control" name="Contact[verifyCode]" style="direction: ltr">
+                </div>
+            </div>
+            </div>
+        
+<p class="help-block help-block-error "></p>
+</div>
+
+</div>    <div class="form-group">
+        <div class="col-sm-5 col-sm-offset-7">
+            <button type="submit" class="btn btn-primary btn-lg send-button">ارسال</button>        </div>
+    </div>
+</form>    </div>
+</div>
+            </div>
+            <aside class="col-xs-12 col-sm-3 pull-left flip">
+                                </aside>
+        </div>
+    </div>
+
+
+{% endblock body %}

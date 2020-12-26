@@ -1,0 +1,74 @@
+{% extends 'shared/base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="breadcrumb">
+                <li><a href="{% url 'home' %}">صفحه‌اصلی</a></li>
+                <li><a href="{% url 'album:index' %}">دسته های گالری تصاویر</a></li>
+                <li class="active">دانشکده برق و کامپیوتر</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container main-content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 pull-right flip">
+
+            <div class="album-view">
+                <h1 class="page-title">
+                    دانشکده برق و کامپیوتر </h1>
+                <article class="album">
+                    <div class="meta-info album-info">
+                        <span class="label label-default">
+                            ۰۵ مهر ۱۳۹۴ </span>
+                        <span class="label label-default">
+                            <i class="fa fa-camera-retro"></i>
+                            ۹ </span>
+                    </div>
+                    <div id="shots" class="shots clearfix">
+                        <div class="row gutter-4">
+                            {% for image in album.albumimage_set.all %}
+                            <div class="col-xs-4 col-sm-3 col-md-2">
+                                <div class="thumbnail">
+                                    <a class="image-link"
+                                        href="{{image.image.url}}"
+                                        title="{{image.title}}"><img class="img-responsive"
+                                            src="{{image.image.url}}"
+                                            width="360" height="200" alt="{{image.title}}"
+                                            data-description="{{image.title}}"></a> </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+        <aside class="col-xs-12 col-sm-3 pull-left flip">
+            <div>
+
+                <div class="albums-list-widget categories-widget ">
+                    <ul class="gallery-albums-list list-unstyled">
+                        <li>
+                            <div class="thumb-wrapper">
+                                <a
+                                    href="{% url 'album:detail' album.pk %}"><img
+                                        class="img-responsive"
+                                        src="{% for image in album.albumimage_set.all %}{% if forloop.first %}{{image.image.url}}{% endif %}{% endfor %}"
+                                        width="800" height="600" alt="{{album.name}}"></a> </div>
+                            <div class="content-wrapper">
+                                <h4 class="album-item-title">
+                                    <a
+                                        href="{% url 'album:detail' album.pk %}">{{album.name}}</a> </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </aside>
+    </div>
+</div>
+{% endblock body %}

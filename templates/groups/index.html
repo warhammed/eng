@@ -1,0 +1,63 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="breadcrumb">
+                <li><a href="{% url 'home' %}">صفحه‌اصلی</a></li>
+                <li class="active">گروه ها</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container main-content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 pull-right flip">
+            <div class="page-view article-view">
+                <article>
+                    <h1>گروه ها</h1>
+                    <figure>
+                    </figure>
+                    <div class="content">
+                    </div>
+                </article>
+                <hr class="seprator">
+                <div class="nestedpage-widget widget">
+                    <ul class="list-unstyled">
+                        {% for group in groups %}
+                        <li>
+                            <a href="{% url 'groups:detail' group.slug %}"><i class="fa fa-angle-right"></i> مهندسی
+                                {{group.name}}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <aside class="col-xs-12 col-sm-3 pull-left flip">
+            <div class="nestedpage-widget widget side-menu">
+
+                <h4 class="">
+                    صفحات مرتبط </h4>
+
+                <ul class="list-unstyled">
+                    <li class="active parent">
+                        - گروه ها </li>
+                    {% for group in groups %}
+                    <li>
+                        <a
+                            href="{% url 'groups:detail' group.slug %}">-
+                            {{group.name}}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </aside>
+    </div>
+</div>
+{% endblock body %}

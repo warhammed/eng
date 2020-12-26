@@ -1,0 +1,140 @@
+
+{% load static %}
+<!doctype html>
+<html lang="fa">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="دانشکده برق و کامپیوتر">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="دانشکده برق و کامپیوتر">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="{% static 'css/site.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    
+    <title>{% block title %}{% endblock title %} - دانشکده برق و کامپیوتر</title>
+  </head>
+  <body>
+
+    {% include 'shared/header.html' %}
+    {% block body %}
+    {% endblock body %}
+    {% include 'shared/footer.html' %}
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+
+
+    <script>
+    window.onscroll = function() {myFunction()};
+    var header = document.getElementById("main-navbar");
+    var sticky = header.offsetTop;
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("fixed-top");
+        header.classList.add("scrolling-navbar");
+      } else {
+        header.classList.remove("fixed-top");
+        header.classList.remove("scrolling-navbar");
+      }
+    }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} 
+<!DOCTYPE html>
+
+<html lang="fa">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/file/download/website/1465716489-favicon.ico" type="image/x-icon" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.theme.default.css' %}" rel="stylesheet">
+    <link href="{% static 'css/helpers.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'css/print.css' %}" rel="stylesheet" media="print">
+    <link href="{% static 'css/bootstrap-rtl.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome-rtl.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles-rtl.css' %}" rel="stylesheet">
+    <link href="{% static 'css/yamm.css' %}" rel="stylesheet">
+    <link href="{% static 'css/dropdownSubmenuPolyfill.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% include 'shared/header.html' %}
+    {% block body %}
+    {% endblock body %}
+    {% include 'shared/footer.html' %}
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+    {% comment %} <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/back-to-top.js' %}"></script>
+    <script src="{% static 'js/yii.js' %}"></script>
+    <script src="{% static 'js/core.js' %}"></script>
+    <script src="{% static 'js/translate.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script> 
+
+    <script>jQuery(function ($) {
+
+        $('#logo-carousel').owlCarousel({
+            autoplay: true,
+            autoplaySpeed : 300,
+            autoplayHoverPause: true,
+            nav : true,
+            navText : [
+                '<i class="fa fa-chevron-left"></i>',
+                '<i class="fa fa-chevron-right"></i>'
+            ],
+            dots: false,
+            rtl: true,
+                    responsive : {
+                        0 : {
+                            items:1
+                        },
+                        480 : {
+                            items:2
+                        },
+                        768 : {
+                            items:3
+                        },
+                        992 : {
+                            items:4
+                        }
+                    }
+        });
+
+        jQuery('#widget-config-modal').modal({"show":false,"backdrop":false});
+        });
+    </script>
+</body>
+</html>
+{% endcomment %}

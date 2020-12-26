@@ -1,0 +1,29 @@
+{% extends 'shared/base.html' %} {% block body %}
+<div class="container main-content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left flip">
+            <div class="albums-view container">
+                <div class="row no-gutter">
+                    <section id="wbe0e7ea7326ed19fd327327f1f1937be0" class="albums-wrapper clearfix">
+                        {% for album in albums %}
+                        <div class="item col-sm-4 col-md-3" data-key="65">
+                            <div class="thumbnail">
+                                <a href="{% url 'album:detail' album.pk %}">
+                                    <img class="img-responsive" src="{% for image in album.albumimage_set.all %}{% if forloop.first %}{{image.image.url}}{% endif %}{% endfor %}" width="800" height="600" alt="دانشکده برق و کامپیوتر">
+                                        <small class="images-count">{{album.albumimage_set.count}} <i class="fa fa-camera-retro"></i></small></a>
+                                <div class="caption">
+                                    <h3 class="title">
+                                        <a href="{% url 'album:detail' album.pk %}">{{album.name}}</a> </h3>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
